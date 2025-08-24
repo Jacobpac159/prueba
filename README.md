@@ -65,22 +65,22 @@ Incluye **frontend**, **backend (FastAPI)**, **PostgreSQL (Bitnami)**, **Ingress
 
 ## Instalacion manual (Helm)
 
-# 1) Clonar y entrar al chart
+ 1) Clonar y entrar al chart
 git clone https://github.com/nicholastrsu/PARCIAL_CHARTS_PATRONES-AVANZADOS.git
 cd PARCIAL_CHARTS_PATRONES-AVANZADOS/pedido-app
 
-# 2) Preparar dependencias (Bitnami PostgreSQL)
+ 2) Preparar dependencias (Bitnami PostgreSQL)
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm dependency update
 
-# 3) Instalar en el namespace 'pedido-dev'
+#3) Instalar en el namespace 'pedido-dev'
 helm install pedido-app . -n pedido-dev --create-namespace
 
-# 4) Agregar DNS local del Ingress
-#    reemplaza <IP_INGRESS> por la IP de tu controlador (minikube ip o LB)
-#    Ejemplo minikube: echo "$(minikube ip) pedido.local" | sudo tee -a /etc/hosts
-#    Ejemplo genérico:
-# echo "<IP_INGRESS> pedido.local" | sudo tee -a /etc/hosts
+ 4) Agregar DNS local del Ingress
+   reemplaza <IP_INGRESS> por la IP de tu controlador (minikube ip o LB)
+   Ejemplo minikube: echo "$(minikube ip) pedido.local" | sudo tee -a /etc/hosts
+   Ejemplo genérico:
+echo "<IP_INGRESS> pedido.local" | sudo tee -a /etc/hosts
 
 ## Instalación con ArgoCD
 
