@@ -89,10 +89,10 @@ kubectl apply -f application.yaml -n argocd
 
 ## Comandos utiles:
 
-Ver estado general
+Ver estado general:
 kubectl get pods,svc,ingress,hpa -n pedido-dev
 
-Ver logs del backend / frontend
+Ver logs del backend / frontend:
 kubectl logs -n pedido-dev deploy/backend -f
 kubectl logs -n pedido-dev deploy/frontend -f
 
