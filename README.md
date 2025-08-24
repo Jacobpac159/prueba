@@ -73,13 +73,13 @@ cd PARCIAL_CHARTS_PATRONES-AVANZADOS/pedido-app
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm dependency update
 
-#3) Instalar en el namespace 'pedido-dev'
+ 3) Instalar en el namespace 'pedido-dev'
 helm install pedido-app . -n pedido-dev --create-namespace
 
  4) Agregar DNS local del Ingress
-   reemplaza <IP_INGRESS> por la IP de tu controlador (minikube ip o LB)
-   Ejemplo minikube: echo "$(minikube ip) pedido.local" | sudo tee -a /etc/hosts
-   Ejemplo genérico:
+reemplaza <IP_INGRESS> por la IP de tu controlador (minikube ip o LB)
+Ejemplo minikube: echo "$(minikube ip) pedido.local" | sudo tee -a /etc/hosts
+Ejemplo genérico:
 echo "<IP_INGRESS> pedido.local" | sudo tee -a /etc/hosts
 
 ## Instalación con ArgoCD
